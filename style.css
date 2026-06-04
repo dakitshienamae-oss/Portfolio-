@@ -1,161 +1,95 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  scroll-behavior: smooth;
-  background-color: #f4f9ff;
-  color: #1f2d3d;
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .about-box {
+    width: 85%;
+  }
+
+  .cert-card {
+    width: 240px;
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-/* SECTIONS */
-.section {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+/* Phones */
+@media (max-width: 768px) {
+
+  /* SECTION LAYOUT */
+  .section {
+    flex-direction: column;
+    height: auto; /* para dili mo overflow */
+    padding: 40px 15px;
+  }
+
+  /* HEADINGS */
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* PROFILE IMAGE */
+  .profile-pic {
+    width: 160px;
+    height: 160px;
+  }
+
+  /* ABOUT BOX */
+  .about-box {
+    width: 95%;
+    padding: 12px;
+  }
+
+  /* CERT GRID STACK */
+  .cert-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cert-card {
+    width: 90%;
+  }
+
+  .cert-img {
+    height: 200px;
+  }
+
+  /* CONTACT BOX */
+  .contact-item {
+    width: 90%;
+  }
 }
 
-/* SOFT BACKGROUNDS */
-.home {
-  background: linear-gradient(135deg, #cfe8ff, #ffffff);
-}
+/* Small phones */
+@media (max-width: 480px) {
 
-.about {
-  background: #f4f9ff;
-}
+  h1 {
+    font-size: 20px;
+  }
 
-.certs {
-  background: #e6f3ff;
-}
+  h2 {
+    font-size: 18px;
+  }
 
-.certs2 {
-  background: #f4f9ff;
-}
+  .profile-pic {
+    width: 140px;
+    height: 140px;
+  }
 
-.certs3 {
-  background: #e6f3ff;
-}
+  .cert-img {
+    height: 180px;
+  }
 
-.contact {
-  background: #ffffff;
-}
-
-/* HEADINGS */
-h1, h2 {
-  color: #2b6cb0;
-}
-
-/* PROFILE */
-.profile-pic {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-
-  border-radius: 12px;
-  border: 3px solid #90cdf4;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  margin-bottom: 15px;
-}
-
-/* ABOUT BOX */
-.about-box {
-  background: #ffffff;
-  margin: 15px auto;
-  padding: 15px;
-  border-radius: 12px;
-  width: 70%;
-  border: 1px solid #cfe8ff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-/* CERT GRID */
-.cert-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-/* CERT CARD */
-.cert-card {
-  background: #ffffff;
-  padding: 10px;
-  border-radius: 12px;
-  width: 280px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
-
-/* CERT IMAGE */
-.cert-img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-
-  border-radius: 10px;
-  border: 2px solid #90cdf4;
-
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.cert-img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(144, 205, 244, 0.5);
-}
-
-/* POPUP */
-#popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background: rgba(0,0,0,0.7);
-
-  justify-content: center;
-  align-items: center;
-}
-
-#popup-img {
-  max-width: 90%;
-  max-height: 90%;
-
-  border-radius: 10px;
-  border: 3px solid #90cdf4;
-}
-
-/* CONTACT */
-.contact-text {
-  color: #4a5568;
-  margin-bottom: 20px;
-}
-
-.contact-box {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.contact-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  background: #ffffff;
-  padding: 10px 15px;
-  border-radius: 10px;
-  border: 1px solid #cfe8ff;
-
-  width: 280px;
-}
-
-.icon {
-  width: 20px;
-  height: 20px;
+  .about-box {
+    font-size: 14px;
+  }
 }
